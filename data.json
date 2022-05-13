@@ -1,0 +1,17 @@
+[
+{
+    "picture":"/hack/173-1735211_most-popular-hacking.jpg",
+    "name":"adey",
+    "age" :"18",
+    "price" :"10",
+    "sex":"male"
+
+},
+{
+    "name":"Bruno",
+    "age" :"20",
+    "price" :"10million",
+    "sex":"male"
+
+}
+]

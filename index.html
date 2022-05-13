@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+
+    <meta name="viewport" content="width=device-1">
+    <meta name="description" content="mikes">
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_bZdlgA2I7TByJRYJrJEbyWPQ93P_s-0&callback=initMap">
+</script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+ integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+ crossorigin=""></script>
+  
+    <title>learn</title>
+<link rel="stylesheet" href="index.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<style>
+    #map {
+      height: 100%;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+<body class="mike">
+    <img src=""class="ok">
+
+
+<div class="element">
+    <form>
+        name:
+        <input type="text"class="name">
+    </br>
+    time:
+    <input type="numbers"class="time">
+        
+    </form>
+    <div id="map"></div>
+    <button class="button" type="button">set alarm</button>
+    <div class="space">  </div>
+    <button class="btn"type="button">click me</button>
+</div>
+<iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC_bZdlgA2I7TByJRYJrJEbyWPQ93P_s-0
+    &q=Space+Needle,Seattle+WA">
+</iframe>
+<canvas class="canvas"></canvas>
+<div id="map"></div>
+ <script src="learn.js">
+    
+//using a constructor
+function person(firstname, lastname, dateofbirth){
+    this.firstname = firstname;
+    this.lastname = lastname;
+ this.date=new Date(dateofbirth).getFullYear();
+  this.age=this.date-year;
+  this.fullname=`${this.firstname} ${this.lastname}`;
+ 
+ 
+
+}
+person.prototype.fullname=function(){
+    return `${this.firstname} ${this.lastname}`;
+}
+
+let d= new Date();
+const year=d.getFullYear(d);
+let person1= new person('janem','amelia','2002-07-12');
+let person2= new person("mike","adey",'2001-07-12');
+//console.log(person2.datenow());
+console.log(person1.age);
+console.log(person1.fullname)
+//functions 
+let x=function(a,b){
+    return a+b;
+}
+y=x(2,3)
+console.log(y);
+
+ </script>
+ <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous">
+
+ </script>
+</body>
+</html>
