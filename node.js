@@ -21,10 +21,12 @@ app.get('/',function(req,res){
 
 })
 app.get('/about',function(req,res){
-  
+       var ip=req.ip;
+       var path=req.path;
     //var randomimage=image[Math.floor(Math.random()*image.length)]
-    res.render('about',{fortune:calc.getFortune()})
+    res.render('about',{fortune:calc.getFortune(),ip:ip,port:path})
     //res.render('about',{img:randomimage})
+    res.download('./images/70-701304_dot-hack-wallpaper-hd.jpg,f')
 })
 app.use(function(req,res,next){
     res.status(404)
