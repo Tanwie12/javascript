@@ -39,7 +39,7 @@ app.post('/process-form',function(req, res){
       console.log('2',confirm)
       console.log("form submitted")
        res.end();
-       https://github.com/Tanwie12/javascript-work/blob/d57a368c8c04877d8032473dac23ea20cb3bb7b5/form.js
+     
 })
 app.get('/form', validatecookies,function(req, res){
     res.cookie('session_id','nom nom',{HttpOnly:true})
