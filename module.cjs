@@ -2,6 +2,7 @@ function add(a,b){
     return a + b;
 } 
 exports.add=add;
+
 var fortunes = [
     "Conquer your fears or they will conquer you.",
     "Rivers need springs.",
@@ -15,4 +16,6 @@ var fortunes = [
        return fortunes[n];
 
    }
+   exports.fortunes=fortunes
    exports.getFortune =getFortune;
+   

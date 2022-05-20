@@ -1,10 +1,21 @@
+{{> nav}}
 <h1>Helloabout</h1>
 
 <blockquote>
     {{fortune}}
     
 </blockquote>
-<p>
-    the ip is {{ip}} and the port is {{port}}
-</p>
-<img src="uploadsbingo.jpg"/>
+
+{{#if port}}
+<h1>port number is {{port}} </h1>
+{{else}}
+<h1>no bro nothing to do</h1>
+{{/if}}
+{{#each fortunee }}
+{{@key}}
+<p>{{this}}</p>
+{{/each}}
+{{#with person as |person|}}
+<h1>{{person.name}}</h1>
+<p>{{person.age}}</p>
+{{/with}}

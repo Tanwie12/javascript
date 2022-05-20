@@ -9,41 +9,59 @@
 //     accessToken: 'your.mapbox.access.token'
 // }).addTo(map);
 // google
-let map;
+// et map;
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
-}
+// function initMap() {
+//   map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: -34.397, lng: 150.644 },
+//     zoom: 8,
+//   });
+// }
 
-window.initMap = initMap;
+// window.initMap = initMap;
 
-async function iss(){
-  const response = await fetch('https://api.wheretheiss.at/v1/satellites/25544')
-  const data=await response.json()
-  show(data)
-const {latitude:lat,longitude:long}=data
-show(lat)
-}
-iss();
+// async function iss(){
+//   const response = await fetch('https://api.wheretheiss.at/v1/satellites/25544')
+//   const data=await response.json()
+//   show(data)
+// const {latitude:lat,longitude:long}=data
+// show(lat)
+// }
+// iss();
 
 
- function show(s){
-  console.log(s)
-}
-var img_file=document.getElementById('img')
-var img='';
-img_file.addEventListener('change',function(){
-  img=img_file.value;
-  console.log(img);
-  var reader=new FileReader();
-  reader.onload=function(){
-    img=reader.result;
-    document.getElementById('imgs').setAttribute("src",img);
+//  function show(s){
+//   console.log(s)
+// }
+// var img_file=document.getElementById('img')
+// var img='';
+// img_file.addEventListener('change',function(){
+//   img=img_file.value;
+//   console.log(img);
+//   var reader=new FileReader();
+//   reader.onload=function(){
+//     img=reader.result;
+//     document.getElementById('imgs').setAttribute("src",img);
 
-  }
-  reader.readAsDataURL(this.files[0]);
+//   }
+ 
 
-})
+// })
+// ?
+var formdata= new FormData();
+formdata.append('key1', 'name')
+formdata.append('key2', 'age')
+
+// // for(let key of formdata.keys()){
+// //   console.log(key,formdata[key])
+// // }
+// // Create a test FormData object
+// var formData = new FormData();
+// formData.append('key1', 'value1');
+// formData.append('key2', 'value2');
+var adey =new Headers();
+adey.append('bruno', '18');
+// Display the keys
+
+console.log(adey)
+console.log(formdata)

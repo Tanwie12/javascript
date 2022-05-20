@@ -1,0 +1,61 @@
+<div class="container shadow-lg p-5 m-5">
+<form action="/process-form" method="post" name="nade" class="form-horizontal container-fluid"id="form">
+enter name:
+</br>
+<input type="text" name="name" required="required">
+</br>
+enter password:
+</br>
+<input type="password" name="password" required>
+<input type="submit"class="submit btn-primary"value="submit" />
+<div class="div">
+    <h3></h3>
+</div>
+</form>
+</div>
+<script>
+$(function(){
+$('.div').hide();
+    $('form').submit(function(e){
+       
+       // e.preventDefault();
+       ;
+        let formdata= new FormData(e.target)
+        let obj= new Object();
+        for(let key of formdata.keys()){
+            obj[key]=formdata.get(key)
+        }
+        var h= new Headers();
+        h.append('Content-Type','application/json');
+      var object={
+          name:'adey',
+          age:'bruno'
+      }
+        fetch("/process-form",{
+           headers:h,
+            method: "POST",
+         body:JSON.stringify(obj)
+        }).then(function(res){
+              return res.text()
+        }).then(function(data){
+             $('.div').show(1000)
+           
+             $('h3').html(data).css("color", "green")
+            console.log(data)
+        })
+        .catch((e) => {
+            console.error(e)
+              $('.div').show(1000)
+             $('h3').html("failure").css("color", "green")
+        })
+       
+    })
+
+
+})
+         console.log("jquery")
+    
+    
+   
+    </script>
+  
