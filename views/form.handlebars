@@ -2,7 +2,7 @@
 <form action="/process-form" method="post" name="nade" class="form-horizontal container-fluid"id="form">
 enter name:
 </br>
-<input type="text" name="name" required="required">
+<input type="text" name="username" required="required">
 </br>
 enter password:
 </br>
@@ -17,9 +17,9 @@ enter password:
 $(function(){
 $('.div').hide();
     $('form').submit(function(e){
+       console.log("ok not working")
+        e.preventDefault();
        
-       // e.preventDefault();
-       ;
         let formdata= new FormData(e.target)
         let obj= new Object();
         for(let key of formdata.keys()){
